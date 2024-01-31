@@ -1,0 +1,31 @@
+$themeorange : #F7C59F;
+$themeDarkBlue : #2A324B;
+$themeDarkGrey : #767B91;
+$themeGrey : #C7CCDB;
+$bgColor : #E1E5EE;
+
+*{
+    margin:0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+@mixin makecenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin dashboardbtn {
+    cursor: pointer;
+    background-color: $themeorange;
+    padding: 10px 20px;
+    border-radius: 40px;
+    border-color: transparent;
+}
