@@ -13,7 +13,7 @@ function DashboardPage (){
         })()
     },[])
     
-    console.log(inscrits);
+    // console.log(inscrits);
     const [programmes, setProgrammes] = useState(null)
     useEffect(()=>{
         (async()=>{
@@ -23,6 +23,8 @@ function DashboardPage (){
         })()
     },[])
 
+    console.log(programmes);
+
 
     function countDown(targetDate) {
         const now = new Date()
@@ -31,6 +33,14 @@ function DashboardPage (){
         const days = Math.ceil(difference / (1000 * 60 * 60 * 24))
         return days;
       }
+
+      const [programmeDay, setProgrammeDay] = useState("friday")
+      function handleProgrammeDate (event, day) {
+        setProgrammeDay(`${day}`)
+      }
+
+
+
 
     return(
         <>
@@ -42,7 +52,7 @@ function DashboardPage (){
                     <div className="grid-container">
                         <div className="grid-item">
                             <p>Nombre d'inscrits</p>
-                            {inscrits && <h2>{3000-inscrits.length}/3000</h2>}
+                            {inscrits && <h2>{inscrits.length}/3000</h2>}
                         </div>
                         <div className="grid-item">
                             <p>Nombre d'artistes programmés</p>
@@ -64,6 +74,7 @@ function DashboardPage (){
                         </div>
                         <div className="grid-item">
                             <h2>Personnes inscrites</h2>
+                            <div className="inscrites--body">
                             {inscrits && (
                                 inscrits.map(element => {
                                     return(
@@ -81,18 +92,60 @@ function DashboardPage (){
                                                     </>
                                                 )
                                             })}
-                                            
+                                            <hr />
                                         </div>
                                     )
                                 })
                             )}
-                            <div>
+                            </div>
+                            <div> 
 
                             </div>
                             <button>Voir tous les inscrits</button>
                         </div>
                         <div className="grid-item">
                             <h2>Programmation</h2>
+                            <div className="programme--body">
+                                <button onClick={event => handleProgrammeDate(event, 'friday')}>V</button>/
+                                <button onClick={event => handleProgrammeDate(event, 'saturday')}>S</button>/ 
+                                <button onClick={event => handleProgrammeDate(event, 'sunday')}>D</button>
+
+                                <p>{programmeDay==='friday' && "Vendredi : "}</p>
+                                <p>{programmeDay==='saturday' && "Samedi : "}</p>
+                                <p>{programmeDay==='sunday' && "Dimanche : "}</p>
+                                <div className='programme--list friday'>
+                                    {programmes && programmeDay === 'friday' && (
+                                        <>
+                                            {programmes.filter(element => element.DateId === 1).map(filteredElement => (
+                                                <>
+                                                    <p>{filteredElement.Heure.heure}: 00 h</p> 
+                                                    <p>{filteredElement.artist}</p><br />
+                                                </>
+                                            ))}
+                                        </>
+                                    )}
+                                    {programmes && programmeDay === 'saturday' && (
+                                        <>
+                                            {programmes.filter(element => element.DateId === 2).map(filteredElement => (
+                                                <>
+                                                    <p>{filteredElement.Heure.heure}: 00 h</p>
+                                                    <p>{filteredElement.artist}</p><br />
+                                                </>
+                                            ))}
+                                        </>
+                                    )}
+                                    {programmes && programmeDay === 'sunday' && (
+                                        <>
+                                            {programmes.filter(element => element.DateId === 3).map(filteredElement => (
+                                                <>
+                                                    <p>{filteredElement.Heure.heure}: 00 h</p>
+                                                    <p>{filteredElement.artist}</p><br />
+                                                </>
+                                            ))}
+                                        </>
+                                    )}
+                                </div>
+                            </div>
                             <button>Voir tous les inscrits</button>
                         </div>
                         <div className="grid-item">
@@ -101,7 +154,34 @@ function DashboardPage (){
                         </div>
                         <div className="grid-item">
                             <h2>ARTISTES</h2>
-                            <div></div>
+                            <div className='artist--box'>
+                                <div className="artist--flex">
+                                <div className='artist--photo'>
+                                    <img src="https://i.scdn.co/image/ab6761610000e5ebf83823555da55fd07555fbd0" alt="" />
+                                </div>
+                                <div>
+                                    <p>Charlie Puth :</p>
+                                    <p>Vendredi 5 juillet (18h)</p>
+                                    <div className='artist--button'>
+                                        <div>
+                                            <img src="/assets/imgs/dashboard_admin/ajouter-un-bouton.png" alt="" /><span>Ajouter</span>
+                                        </div>
+                                        <div>
+                                            <img src="/assets/imgs/dashboard_admin/modification-du-stylo.png" alt="" /><span>Modifier</span>
+                                        </div>
+                                        <div>
+                                            <img src="/assets/imgs/dashboard_admin/supprimer.png" alt="" /><span>Supprimer</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellendus aut nostrum, ratione veritatis delectus expedita ducimus cum. Rerum possimus repellendus quod doloribus cupiditate, nihil amet, dolores repellat ea neque iusto?</p>
+                                <div className='artist--sns'>
+                                    <img src="" alt="" />
+                                    <img src="" alt="" />
+
+                                </div>
+                            </div>
                             <button>Voir tous les artistes</button>
                         </div>
                     </div>

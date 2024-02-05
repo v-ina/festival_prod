@@ -1,1 +1,50 @@
 @import '/public/assets/scss/variables';
+
+.form--contact{
+    background-color: #0081A7;
+    width: 80%;
+    max-width: 900px;
+    padding: 50px 100px;
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+     
+    .input--flex{
+        display: flex;
+    }
+
+    input, select, textarea{
+        background-color: $fontColorWhite;
+        border-color: transparent;
+        border-radius: 40px;
+        font-size: 16px;
+        display: block;
+        min-height: 40px;
+        margin: 10px auto;
+        padding-left: 20px;
+    }
+    input:not(:nth-child(5)){
+        width: 45%;
+        max-width: 380px;
+    }
+    select,textarea{
+        width: 95%;
+        margin-top: 30px;
+    }
+    textarea{
+        // max-width: 850px;
+        height: 300px;
+        padding: 20px;
+    }
+    
+
+    .btn__reservation{
+        display: inline-block;
+        @include primarybtn;
+        border-color: transparent;
+        font-size: 1.3rem;
+        margin-left: 40vw;
+        margin-top: 20px;
+    }
+    
+}

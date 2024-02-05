@@ -1,1 +1,40 @@
 @import '/public/assets/scss/variables';
+
+.home--newsletter{
+    background-color: $bgColorOrange;
+    padding-bottom: 100px;
+    padding-top: 100px;
+
+    .home--newsletterbox{
+        margin: 0 auto;
+        background-color: #0081A7;
+        color: white;
+        width: 35%;
+        border-radius: 40px;
+        text-align: center;
+        padding: 30px 50px;
+
+        h5{
+            font-size: 2rem;
+            font-weight: normal;
+        }
+        p:nth-child(2){
+            margin-top: 20px;
+        }
+
+        form{
+            margin-top: 30px;
+            input{
+                background-color: $btnColor;
+                border-color: transparent;
+                border-radius: 40px;
+                font-size: 20px;
+                padding: 5px 20px;
+
+                &::placeholder{
+                    color: white;
+                }
+            }
+        }
+    }
+}

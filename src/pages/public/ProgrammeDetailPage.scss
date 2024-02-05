@@ -1,1 +1,63 @@
 @import '/public/assets/scss/variables';
+
+
+.section--programmeDetail{
+    .programme--flex{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5%;
+    
+        .programme--img{
+            width: 350px;
+            height: 400px;
+    
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 40px;
+            }
+        }
+    
+        .programme--description{
+            text-align: center;
+            width: 60%;
+            max-width: 700px;
+            p:nth-child(2){
+                margin-top: 20px;
+            }
+    
+            .programme--sns--flex{
+                margin-top: 30px;
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                img{
+                    width: 50px;
+                }
+            }
+    
+        }
+    }
+    
+    h2, p{
+        text-align: center;
+    }
+    h2{
+        font-size: 2rem;
+        margin-top: 80px;
+    }
+    p{
+        margin-top: 30px;
+    }
+    
+    .btn__reservation{
+        display: block;
+        @include primarybtn;
+        border-color: transparent;
+        width: fit-content;
+        font-size: 1.3rem;
+        margin: 30px auto 0px auto;
+    }
+}

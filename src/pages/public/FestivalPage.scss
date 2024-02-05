@@ -1,1 +1,44 @@
 @import '/public/assets/scss/variables';
+
+.festival--flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.img{
+    margin: 0 auto;
+    width: 80%;
+    height: 150px;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 40px;
+    }
+}
+
+.festival--flex{
+    @include pagepadding;
+    h2{
+        font-size: 2rem;
+        font-family: 'modak';
+        color: $fontColorWhite;
+        font-weight: normal;
+        z-index: 4;
+    }
+}
+
+
+.text_container {
+    background-color: #0081A7;
+    color: #EEF6F8;
+    font-family:  sans-serif;
+    width: 70%;
+    border-radius: 40px;
+    padding: 5%;
+    margin: 0 auto;
+    
+    margin-top: 200px;
+}

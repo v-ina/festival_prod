@@ -36,20 +36,28 @@ function ConnextionPage (){
 
     return(
         <>
-            <main>
-                <div>
-                    <p>Inscrivez-vous pour recevoir vos places!</p>
-                    <form action="" onSubmit={handleLogin}>
-                        <label htmlFor="email"> Adresse e-mail
-                            <input type="email" id="email" name="email" />
+            <div className='main'>
+                <div className='inscription--box'>
+                    <div className='sitelogo'>
+                        <img src="/assets/imgs/Fichier_1Png.png" alt="" />
+                    </div>
+                    <p>Inscrivez vous pour recevoir vos places !</p>
+
+                    <form action="">
+                        <label htmlFor="email">Adresse mail
+                            <input type="email" name='email' id='email' />
                         </label>
-                        <label htmlFor="password"> Mot de passe
-                            <input type="text" id='password' name='password' />
+                        <label htmlFor="password">Mot de passe
+                            <input type="password" name='password' id='password' />
                         </label>
-                        <input type="submit" value="Connexion"/>
+                        <input type="submit" value="Connexion" />
                     </form>
-                </div>    
-            </main>   
+
+
+                </div>
+
+            </div>
+
         </>
     )   
 }

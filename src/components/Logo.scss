@@ -1,0 +1,31 @@
+@import '/public/assets/scss/variables';
+
+.home--main{
+    background-image: $bgColorOrange;
+    height: 100%;
+    width: 100%;
+
+    .home--banner{
+        padding: 50px;
+        background-color: $bgColorOrange;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+
+        .banner-logo{
+            width: 400px;
+            min-width: 300px;
+            img{
+                width: 100%;
+            }
+        }
+        h1{
+            font-size: 5rem;
+            color: #FDFCDC;
+            font-family: 'modak';
+            font-weight: normal;
+
+        }
+    }
+}

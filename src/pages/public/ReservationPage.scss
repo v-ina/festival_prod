@@ -1,1 +1,67 @@
 @import '/public/assets/scss/variables';
+
+.form--reservation{
+    background-color: #0081A7;
+    width: 80%;
+    max-width: 900px;
+    padding: 50px 100px;
+    border-radius: 40px;
+    margin: 0 auto;
+    margin-bottom: 150px;
+     
+    hr{
+        width: 50%;
+        margin: 20px auto;
+    }
+
+
+    input, select, textarea{
+        background-color: $fontColorWhite;
+        border-color: transparent;
+        border-radius: 40px;
+        font-size: 16px;
+        display: block;
+        min-height: 40px;
+        margin: 10px auto;
+        padding-left: 20px;
+    }
+    input:not(:nth-child(5)){
+        width: 45%;
+        max-width: 380px;
+    }
+    select,textarea{
+        width: 45%;
+        margin-top: 30px;
+    }
+
+    select{
+        margin-bottom: 40px;
+    }
+    
+
+    .btn__reservation{
+        display: block;
+        @include primarybtn;
+        border-color: transparent;
+        font-size: 1.3rem;
+        margin-top: 20px;
+
+    }
+
+    .checkbox--div{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+    }
+    
+    label{
+        display: inline-block;
+        width: fit-content;
+        margin: 0px 20px;
+    }
+    
+}
+
+
+

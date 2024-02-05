@@ -9,6 +9,7 @@ import DashboardPage from '../src/pages/admin/DashboardPage'
 import ArchivePage from '../src/pages/public/ArchivePage'
 import ContactPage from '../src/pages/public/ContactPage'
 import ReservationPage from '../src/pages/public/ReservationPage'
+import InfoPratiquePage from "./pages/public/InfoPratiquePage";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
         <Route path="/programme" element={<ProgrammePage />} />
         <Route path="/programme/:id" element={<ProgrammeDetailPage />} />
         <Route path="/archive" element={<ArchivePage />} />
+        <Route path="/infos" element={<InfoPratiquePage />} />
         <Route path="/reservation" element={<ReservationPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path='/legal' element={<LegalPage />} />

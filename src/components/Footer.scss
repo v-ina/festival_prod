@@ -1,1 +1,43 @@
 @import '/public/assets/scss/variables';
+
+footer{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include pagepadding;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .footer__left{
+        a{
+            color: black;
+        }
+        ul{
+            display: flex;
+            gap: 30px;
+            font-weight: bold;
+        }
+        p:nth-child(2){
+            margin-top: 30px;
+        }
+        p:nth-child(3){
+            margin-top: 10px;
+        }
+    }
+    .footer__right{
+        text-align: center;
+
+        h6{
+            font-size: 16px;
+        }
+        img{
+            width: 50px;
+            display: inline-block;
+            margin-left: 15px;
+            margin-top: 20px;
+        }
+    }
+
+
+}

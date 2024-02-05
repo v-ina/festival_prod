@@ -1,0 +1,75 @@
+@import '/public/assets/scss/variables';
+
+.info--main{
+    @include pagepadding;
+    h2{
+        text-align: center;
+        font-size: 8rem;
+        font-family: 'modak';
+        color: #FDFCDC;
+        font-weight: normal;
+    }
+
+    .faq--flex{
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .faq--box{
+            background-color: #0081A7;
+            border-radius: 40px;
+            max-width: 300px;
+
+            padding: 40px 60px;
+            color: #FDFCDC;
+            
+            p{
+                margin-top: 20px;
+            }
+        }
+    }
+
+    h3{
+        margin-top: 100px;
+        margin-bottom: 50px;
+        font-size: 2rem;
+        color: #FDFCDC;
+        font-family: 'modak';
+        font-weight: normal;
+    }
+
+    .faq--imgbox{
+        position: relative;
+        padding-bottom: 300px;
+
+        .faq--box__large{
+            margin: 0 auto;
+            background-color: #0081A7;
+            border-radius: 40px;
+            width: 60%;
+            padding: 40px 300px 40px 40px;
+            min-height: 200px;
+            color: #FDFCDC;
+        }
+
+        .faq--box__img{
+            width: 250px;
+            height: 400px;
+            position: absolute;
+            right: 12%;
+            top: 50px;
+
+
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 40px;
+            }
+        }
+         
+
+    }
+
+}

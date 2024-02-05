@@ -1,1 +1,114 @@
 @import '/public/assets/scss/variables';
+
+
+.main{
+    background-color: $bgColorOrange;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .inscription--box{
+        background-color: white;
+        width: 500px;
+        height: 750px;
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+
+        .sitelogo{
+            width: 400px;
+            img{
+                width: 100%;
+
+            }
+        }
+
+        p{
+            margin-top: 40px;
+            font-weight: bold;
+        }
+
+        form{
+            margin-top: 50px;
+            text-align: center;
+            font-weight: bold;
+            label, input{
+                display: block;
+            }
+            label{
+                margin-top: 20px;
+            }
+            input:first-child{
+                background-color: $bgColorOrange;
+                border-color: transparent;
+                border-radius: 40px;
+                height: 35px;
+                width: 250px;
+                margin-top: 10px;
+                padding-left: 30px;
+            }
+
+            input:nth-child(3){
+                display: inline-block;
+                margin-top: 40px;
+                background-color: $btnColor;
+                color: white;
+                padding: 15px 30px;
+                border-color: transparent;
+                border-radius: 40px;
+                cursor: pointer;
+            }
+        }
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+// main{
+//     background-color: $bgColorOrange;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+
+//     .login_container {
+//         width: 300px;
+//         padding: 3%;
+//         background-color: #FFFFFF;
+//         border: 1px solid #FFFFFF;
+//         border-radius: 40px;
+//         display: flex;
+//         flex-direction: column;
+//         justify-content: center;
+//         align-items: center;
+//         gap: 40px;
+
+//         .img_logo{
+//             width: 300px;
+//         }
+
+        
+//     .btn-primary {
+//         background-color: #F07167;
+//         border: 1px solid #F07167;
+//         border-radius: 40px;
+//         color: #FFFFFF;
+//     }
+//     }
+
+
+// }
+
+

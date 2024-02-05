@@ -3,6 +3,23 @@ $themeDarkBlue : #2A324B;
 $themeDarkGrey : #767B91;
 $themeGrey : #C7CCDB;
 $bgColor : #E1E5EE;
+$bgColorOrange : #FED9B7;
+
+$btnColor : #F07167;
+$themeGreen : #00AFB9;
+
+$fontColorWhite : #FDFCDC;
+
+
+@font-face {
+    font-family: 'modak';
+    src: url('../fonts/Modak/Modak-Regular.ttf');
+}
+@font-face{
+    font-family: 'poppinsBlackIt';
+    src: url('../fonts/Poppins/Poppins-BlackItalic.ttf')
+}
+
 
 *{
     margin:0;
@@ -29,3 +46,19 @@ a{
     border-radius: 40px;
     border-color: transparent;
 }
+
+@mixin primarybtn {
+    background-color: $btnColor;
+    padding: 10px 15px;
+    font-size: 2rem;
+    color: white;
+    border-radius: 40px;
+    border: 1px solid black;
+    font-weight: normal;
+}
+
+@mixin pagepadding {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
